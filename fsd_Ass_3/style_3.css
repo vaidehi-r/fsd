@@ -1,0 +1,88 @@
+:root{
+  --bg: #8d86d9;        /* purple outer */
+  --phone: #2a2835;     /* dark phone body */
+  --btn: #343241;       /* number buttons */
+  --op: #5b36a6;        /* operator buttons */
+  --eq: #7a4cff;        /* equal button */
+  --text: #f3f2f7;
+  --muted: rgba(255,255,255,0.88);
+  --shadow: 0 18px 45px rgba(0,0,0,0.35);
+}
+
+*{ box-sizing: border-box; }
+
+body{
+  margin: 0;
+  font-family: Inter, system-ui, Arial, sans-serif;
+}
+
+.stage{
+  min-height: 100vh;
+  background: var(--bg);
+  display: grid;
+  place-items: center;
+  padding: 24px;
+}
+
+.phone{
+  width: 270px;
+  padding: 22px 18px 18px;
+  border-radius: 34px;
+  background: var(--phone);
+  box-shadow: var(--shadow);
+}
+
+.display{
+  height: 110px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  padding: 14px 6px 0 6px;
+  font-size: 34px;
+  font-weight: 500;
+  color: var(--muted);
+  overflow: hidden;
+}
+
+.grid{
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: repeat(4, 56px);
+  gap: 12px;
+  justify-content: center;
+}
+
+.btn{
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  color: var(--text);
+  background: var(--btn);
+  box-shadow: 0 10px 18px rgba(0,0,0,0.25);
+  transition: transform 0.06s ease, filter 0.12s ease;
+}
+
+.btn:active{
+  transform: scale(0.97);
+  filter: brightness(1.08);
+}
+
+.btn.op{
+  background: var(--op);
+  font-size: 20px;
+}
+
+.btn.eq{
+  background: var(--eq);
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.btn.fn{
+  background: #2f2d3a;
+  color: #9d7cff;
+  font-weight: 600;
+}
