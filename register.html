@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Register</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h2>Student Registration</h2>
+
+    <form action="insert.php" method="POST" onsubmit="return validate()">
+        <input type="text" name="fname" placeholder="First Name" required>
+        <input type="text" name="lname" placeholder="Last Name" required>
+        <input type="text" name="roll" placeholder="Roll No / ID" required>
+        <input type="password" name="pass" placeholder="Password" required>
+        <input type="password" name="cpass" placeholder="Confirm Password" required>
+        <input type="text" name="contact" placeholder="Contact Number" required>
+        <button type="submit">Register</button>
+    </form>
+
+    <br>
+    <a href="index.html">Back to Login</a>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
