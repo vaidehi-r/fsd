@@ -1,38 +1,108 @@
-.App {
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Segoe UI", sans-serif;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+}
+
+/* Main container */
+.container {
+  width: 340px;
+  padding: 22px;
+  border-radius: 22px;
+
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Title */
+h1 {
+  color: #fff;
+  margin-bottom: 15px;
+  font-size: 22px;
+  letter-spacing: 1px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+/* Display screen */
+.display {
+  height: 70px;
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 15px;
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  color: #fff;
+  font-size: 30px;
+  font-weight: 500;
+
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: flex-end;
+
+  padding: 10px 15px;
+  margin-bottom: 18px;
+
+  overflow-x: auto;
+  box-shadow: inset 0 0 12px rgba(0,0,0,0.3);
+}
+
+/* Grid buttons */
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+/* Base button */
+button {
+  padding: 16px;
+  font-size: 18px;
+
+  border: none;
+  border-radius: 14px;
+  cursor: pointer;
+
+  background: rgba(255, 255, 255, 0.12);
   color: white;
+
+  transition: all 0.2s ease;
+  box-shadow: 0 5px 12px rgba(0,0,0,0.25);
 }
 
-.App-link {
-  color: #61dafb;
+/* Hover + click */
+button:hover {
+  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.22);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+button:active {
+  transform: scale(0.95);
+}
+
+/* Operator buttons */
+button:nth-child(4n) {
+  background: #ff9f43;
+  color: #111;
+  font-weight: bold;
+}
+
+/* Clear button */
+.clear {
+  grid-column: span 4;
+  background: #ff4d4d !important;
+  font-weight: bold;
+}
+
+/* Equal button (IMPORTANT FIX) */
+button:nth-last-child(2) {
+  background: #00d2d3;
+  color: #111;
+  font-weight: bold;
 }
